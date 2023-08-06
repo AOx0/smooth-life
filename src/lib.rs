@@ -23,11 +23,16 @@ impl<const W: usize, const H: usize> Default for Grid<W, H> {
 
 impl<const W: usize, const H: usize> std::fmt::Display for Grid<W, H> {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        self.0.iter().try_for_each(|row| {
-            row.iter().try_for_each(|col| {
-                let i = (col * (LEVELS_LEN as f32 - 1.)).round() as usize % LEVELS_LEN;
-                write!(f, "{:} ", LEVELS[i])
-            })?;
+        let mut levels = [[0usize; W]; H];
+        self.0.iter().enumerate().for_each(|(r, row)| {
+            row.iter()
+                .zip(levels[r].iter_mut())
+                .for_each(|(col, i)| *i = (col * (LEVELS_LEN as f32 - 1.)).round() as usize);
+        });
+
+        levels.iter().try_for_each(|row| {
+            row.iter()
+                .try_for_each(|col| write!(f, "{:} ", LEVELS[*col % LEVELS_LEN]))?;
             write!(f, "\n")
         })
     }
