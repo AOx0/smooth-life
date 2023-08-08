@@ -13,7 +13,7 @@ pub static ALLOC: dhat::Alloc = dhat::Alloc;
 
 #[derive(Debug)]
 pub struct Grid<const W: usize, const H: usize> {
-    grid: Vec<Vec<f32>>,
+    grid: [[f32; W]; H],
     alpha: f32,
     birdth_rate: (f32, f32),
     death_rate: (f32, f32),
@@ -25,7 +25,7 @@ const LEVELS_LEN: usize = LEVELS.len();
 impl<const W: usize, const H: usize> Default for Grid<W, H> {
     fn default() -> Self {
         Grid {
-            grid: vec![vec![0.; W]; H],
+            grid: [[0.; W]; H],
             alpha: 5.,
             birdth_rate: (0.5, 0.5),
             death_rate: (0.5, 0.5),
