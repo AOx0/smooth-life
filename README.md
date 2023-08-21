@@ -1,6 +1,6 @@
 # smooth-life
 
-Follow-up of Tsoding's stream on Smooth Life abailable [here](https://youtu.be/L68_BBiuHUw)
+Follow-up of Tsoding's stream on Smooth Life available [here](https://youtu.be/L68_BBiuHUw)
 
 <img width="275" alt="Screenshot 2023-08-21 at 3 16 36 a m" src="https://github.com/AOx0/smooth-life/assets/50227494/31bb9e0c-5617-41b0-9546-bcdc05db953f">
 <img width="275" height="275" alt="Screenshot 2023-08-21 at 3 14 31 a m" src="https://github.com/AOx0/smooth-life/assets/50227494/cafd4441-59f9-443d-9b55-bcf725e7b9b5">
