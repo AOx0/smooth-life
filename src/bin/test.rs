@@ -7,8 +7,8 @@ fn main() {
     let mut grid: Grid<150, 150> = Grid::new()
         .with_birdth_rate((0.258, 0.355))
         .with_death_rate((20., 130.))
-        .with_dt(0.05)
-        .with_ra(20)
+        .with_dt(0.15)
+        .with_ra(10)
         .into_rand_state();
 
     // more random 2
