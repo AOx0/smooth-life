@@ -17,7 +17,7 @@ debug = 1
 dhat = ["dep:dhat"]
 
 [dev-dependencies]
-criterion = { version = "0.5.1", features = ["html_reports"] }
+criterion = { version = "0.8.1", features = ["html_reports"] }
 
 [[bench]]
 name = "criterion"
